@@ -81,3 +81,5 @@ Answer the following questions:
 **git stash show stash@{number}** - show a specific stashed chan<br>
 
 <hr>
+
+<hr>
