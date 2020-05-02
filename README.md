@@ -68,3 +68,16 @@ Answer the following questions:
 - What does the `git diff` command do? **shows you a difference between two different commits**
 - How do you remove files from the staging area? **git reset HEAD name_of_file** or **git rm --cached name_of_file**
 - How do merge conflicts happen? **When Git can not determine what file or folder to choose when merging since there have been different commits with changes to the same file**
+
+
+
+ #### Stashing.
+ 
+**git stash** - stash your commits (same as git stash save)<br>
+**git stash list** - show the list of stashed changes<br>
+**git stash apply** - move the latest stashed change back into the working directory, but keep it on the list<br>
+**git stash pop** - move the latest stashed change back into the working directory and remove it from the list<br>
+**git stash show** - show the latest stash<br>
+**git stash show stash@{number}** - show a specific stashed chan<br>
+
+<hr>
