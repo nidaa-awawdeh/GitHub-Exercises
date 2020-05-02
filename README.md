@@ -5,7 +5,7 @@
 1-Create a folder called learn_git_again.<br>
 **mkdir learn_git_again**<br>
 2-cd into the learn_git_again folder.<br>
-**cd learn_git_again**<br> 
+**cd learn_git_again**<br>
 3-Create a file called third.txt.<br>
 **touch third.txt**<br>
 4-Initialize an empty git repository.<br>
@@ -69,17 +69,32 @@ Answer the following questions:
 - How do you remove files from the staging area? **git reset HEAD name_of_file** or **git rm --cached name_of_file**
 - How do merge conflicts happen? **When Git can not determine what file or folder to choose when merging since there have been different commits with changes to the same file**
 
+#### Stashing.
 
-
- #### Stashing.
- 
 **git stash** - stash your commits (same as git stash save)<br>
 **git stash list** - show the list of stashed changes<br>
 **git stash apply** - move the latest stashed change back into the working directory, but keep it on the list<br>
 **git stash pop** - move the latest stashed change back into the working directory and remove it from the list<br>
 **git stash show** - show the latest stash<br>
 **git stash show stash@{number}** - show a specific stashed chan<br>
+**git stash pop/apply stash@{number}** to retrieve a specific stashed change.
 
 <hr>
+
+### Advanced Git Exercises.
+
+#### Part I
+
+1-What is the difference between git reset and git revert. When would you use one over the other? <br>
+**When working with others, git revert is much safer as it undoes a commit, but it also generates a new commit that undoes all of the changes introduced in a previous commit and applies it to the current branch. Git reset simply undoes a commit which can be difficult to reconcile when working with others** <br>
+
+2-What is the difference between git merge and git rebase. When would you use one over the other?<br>
+**They are both essential when working on a team. Rebasing is helpful to maintain a cleaner commit history, but should never be done on a branch that has others working on it (since you can easily mess up their commit history).** <br>
+
+3-What is the difference between git stash pop and git stash apply. When would you use one over the other?<br>
+**git stash pop will return the latest value from the stash, but will remove it. Git stash apply will return the latest value but still maintain it in the stash.** <br>
+
+4-What kinds of things can you do in interactive mode when rebasing?<br>
+**You can amend commit messages, edit commits, squash or combine commit messages, remove commits and even execute shell commands**<br>
 
 <hr>
